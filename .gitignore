@@ -1,0 +1,38 @@
+# --- Python ---
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.Python
+
+# --- IDE / OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+
+# --- Project: rendered output and intermediates ---
+frames/
+*.mp4
+*.mov
+*.mkv
+
+# --- Project: temporary numpy/text caches written during render ---
+_volume_tmp.npy
+_chargrid_tmp.txt
+_speeds_tmp.npy
+_sizes_tmp.npy
+
+# --- Project: audio inputs / mixed outputs ---
+# Drop your own tracks in the project root; do not commit them.
+*.wav
+*.mp3
+*.flac
+*.ogg
+*.m4a
+mixed.wav
+mix.wav
+track*_*.wav
