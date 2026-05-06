@@ -2,7 +2,7 @@
 
 Audio-reactive ASCII video generátor. Vyplní celou obrazovku textem písně, aktivně "zpívané" slovo zazáří oranžově, ostatní stopy (kick, bass, pad, lead) modulují pozadí. Výstup: `1920×1080 @ 30 fps` MP4 s namixovaným zvukem.
 
-![preview](preview.png)
+![preview](result.jpg)
 
 Dvě verze:
 
