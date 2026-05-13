@@ -19,13 +19,23 @@ import re
 _BASE = os.path.dirname(os.path.abspath(__file__))
 
 TRACKS = [
-    os.path.join(_BASE, "track1_kick.wav"),
-    os.path.join(_BASE, "track2_pad.wav"),
-    os.path.join(_BASE, "track3_bass.wav"),
-    os.path.join(_BASE, "track4_lead.wav"),
-    os.path.join(_BASE, "track1_vox.wav"),
+    os.path.join(_BASE, "0 Lead Vocals.wav"),
+    os.path.join(_BASE, "1 Backing Vocals.wav"),
+    os.path.join(_BASE, "2 Drums.wav"),
+    os.path.join(_BASE, "3 Bass.wav"),
+    os.path.join(_BASE, "4 Percussion.wav"),
+    os.path.join(_BASE, "5 Synth.wav"),
+    os.path.join(_BASE, "6 Other.wav"),
 ]
-VOX_TRACK_INDEX = 4   # index vokálu (driver pro lyrics timing)
+
+# Mapping indexů do TRACKS na jednotlivé role ve vizuálu:
+VOX_TRACK_INDEX   = 0  # Lead Vocals    -> driver pro lyrics + boost aktivního slova
+PAD_TRACK_INDEX   = 1  # Backing Vocals -> background pulse
+KICK_TRACK_INDEX  = 2  # Drums          -> primární onset flash
+BASS_TRACK_INDEX  = 3  # Bass           -> globální boost CELÉ obrazovky
+PERC_TRACK_INDEX  = 4  # Percussion     -> sekundární onset flash (sjednoceno s kick)
+LEAD_TRACK_INDEX  = 5  # Synth          -> mírná globální modulace
+OTHER_TRACK_INDEX = 6  # Other          -> přidává se do pad-like pozadí
 
 OUTPUT_VIDEO = os.path.join(_BASE, "ascii_output.mp4")
 OUTPUT_AUDIO = os.path.join(_BASE, "mixed.wav")
@@ -242,20 +252,26 @@ def compute_intensity_volume(features, n_frames, positions, words, active_pos_ar
     for fi in range(n_frames):
         target = base_filler.copy()
 
-        # Pad - background pulse
-        pad_e = float(features[1]['rms'][fi])
+        # Pad - background pulse (Backing Vocals + Other dohromady)
+        pad_e = max(
+            float(features[PAD_TRACK_INDEX]['rms'][fi]),
+            float(features[OTHER_TRACK_INDEX]['rms'][fi]) * 0.7,
+        )
         target += pad_field * pad_e * GAIN_PAD
 
         # BASS - silný globální boost CELÉ obrazovky
-        bass_e = float(features[2]['rms'][fi])
+        bass_e = float(features[BASS_TRACK_INDEX]['rms'][fi])
         target += bass_e * GAIN_BASS_GLOBAL
 
-        # Lead - mírná globální modulace
-        lead_e = float(features[3]['rms'][fi])
+        # Lead (Synth) - mírná globální modulace
+        lead_e = float(features[LEAD_TRACK_INDEX]['rms'][fi])
         target += lead_e * GAIN_LEAD
 
-        # Kick - krátký flash na onsetu
-        kick_onset = float(features[0]['onset'][fi])
+        # Kick - krátký flash na onsetu (max z Drums a Percussion)
+        kick_onset = max(
+            float(features[KICK_TRACK_INDEX]['onset'][fi]),
+            float(features[PERC_TRACK_INDEX]['onset'][fi]),
+        )
         if kick_onset > KICK_THRESHOLD:
             target += (kick_onset - KICK_THRESHOLD) * GAIN_KICK
 

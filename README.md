@@ -57,12 +57,14 @@ The script derives 5 "virtual stems" from the mix:
 
 ### FINAL version — separate stem tracks
 
-1. Place five WAV files next to the script:
-   - `track1_kick.wav`
-   - `track2_pad.wav`
-   - `track3_bass.wav`
-   - `track4_lead.wav`
-   - `track1_vox.wav`
+1. Place seven WAV files next to the script (default naming matches Moises / similar stem-separation exports):
+   - `0 Lead Vocals.wav` — drives the lyrics cursor and active-word highlight
+   - `1 Backing Vocals.wav` — feeds the background pulse
+   - `2 Drums.wav` — primary kick / onset flashes
+   - `3 Bass.wav` — global brightness boost across the whole screen
+   - `4 Percussion.wav` — secondary onset flashes (combined with Drums)
+   - `5 Synth.wav` — mild global modulation (lead role)
+   - `6 Other.wav` — additional input folded into the background pulse
 2. Edit `LYRICS` in the config block.
 3. Run:
    ```bash
@@ -70,7 +72,7 @@ The script derives 5 "virtual stems" from the mix:
    ```
 4. Output: `ascii_output.mp4` + `mixed.wav` (the merged audio).
 
-If your filenames differ, edit the `TRACKS` list at the top of the script.
+If your filenames or stem layout differ, edit the `TRACKS` list and the role index constants (`VOX_TRACK_INDEX`, `KICK_TRACK_INDEX`, ...) at the top of the script.
 
 ## Configuration
 
