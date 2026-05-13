@@ -92,158 +92,34 @@ FONT_SIZE_PATTERN   = [16, 14, 22, 18, 13, 28, 15, 19, 14, 24, 17, 13]
 LYRICS_TIMING = "vox_gated"
 
 LYRICS = """
-[Intro – chaotic noise / spoken]
-bottom of the—
-no—
-WAIT
-[Drop – SCREAM]
-BOTTOM OF THE ROOM
-WHERE THE SHADOWS DON'T MOVE
-THEY STAY
-THEY STAY
-THEY STAY
-[Groove switch – funky / almost playful]
-counting lines in my head
-tick-tick—no instead
-they blur, they break
-they melt into gray
-[Hard cut – SCREAM]
-TOO LOUD
-TOO BRIGHT
-CLOSE MY EYES—
-STILL THERE
-[Pop hook – ironic contrast]
-[Pop hook – ironic contrast]
-(soft, catchy)
-no heart, no pulse
-just drift away
-no name, no face
-it's easier that way
-[Glitch rap stream – fast]
-throughthewirestomymindsomethingcallingicantdefineitspinningaroundandaroundandaround
-[Break – silence hit]
-…
-[Heavy breakdown – half-time SCREAM]
-NO VOICE
-NO SOUND
-JUST A SHAPE
-DRAGGING ME DOWN
-[Switch – whisper / creepy]
-walls lean in
-lights go low
-(it finds me)
-from within
-from within
-from within—
-—
-Bottom of the room.
+[Intro]
+[syncopated kick drum, palm-muted electric guitar riff]
+
+[Verse 1]
+[breathy female vocals]
 Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay. Counting the lines in my head, but they blur, and they fade, and they fade into gray.
-Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay.
-(bouncy, unsettling)
-just a flow
-just a flow
-just a sloooow drift away
-(bouncy, unsettling)
-just a flow
-just a flow
-just a sloooow drift away
-[Noise collapse – distorted]
-fade to thin
-skin—skin—skinskinBottom of the room.
-B-bottom of the room where the shadows don't move, and they stay, and they stay, and they stay.
-Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay. Counting the lines in my head, but they blur, and they fade, and they fade into gray.
-Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay.
-no heart
-no—
-[Outro – fragmented callbacks]
-b-bottom
-b-bottom
-bottom of the room
-(shadows stay)
-they stay
-…they stay
-[Final glitch dissolve]
-no heart
-no—
-[Outro – fragmented callbacks]
-b-bottom
-b-bottom
-bottom of the room
-(shadows stay)
-they stay
-…they stay
-[Final glitch dissolve]
-no heart
-no—
-no heart
-no—
-[Outro – fragmented callbacks]
-b-bottom
-b-bottom
-bottom of the room
-(shadows stay)
-they stay
-…they stay
-[Final glitch dissolve]
-no heart
-no—
-no heart
-no—
-[Outro – fragmented callbacks]
-b-bottom
-b-bottom
-bottom of the room
-(shadows stay)
-they stay
-…they stay
-[Final glitch dissolve]
-no heart
-no—
-[Outro – fragmented callbacks]
-b-bottom
-b-bottom
-bottom of the room
-(shadows stay)
-they stay
-…they stay
-[Final glitch dissolve]
-no heart
-no—
+
+[layered vocal harmonies enter]
 Bottom of the room.
 B-bottom of the room where the shadows don't move, and they stay, and they stay, and they stay.
+
 Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay. Counting the lines in my head, but they blur, and they fade, and they fade into gray.
+
 Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay.
-no heart
-no—
-[Outro – fragmented callbacks]
-b-bottom
-b-bottom
-bottom of the room
-(shadows stay)
-they stay
-…they stay
-(shadows stay)
-they stay
-…they stay
-(shadows stay)
-they stay
-…they stay
-[Final glitch dissolve]
-no heart
-no—
-botno heart
-no—
-[Outro – fragmented callbacks]
-b-bottom
-b-bottom
-bottom of the room
-(shadows stay)
-they stay
-…they stay
-[Final glitch dissolve]
-no heart
-no—
-(pulse cut)
+
+[Chorus]
+[full electronic beat, driving bass]
+No heart, no pulse, just a shape in the dark, and it's pulling me under somewhere. Through the wires to my mind, something calling, but I can't define. No voice, no sound, just a trace going around, and around, and around.
+
+[Outro]
+[atmospheric synth pads swell]
+Bottom of the room.
+
+B-bottom of the room where the shadows don't move, and they stay, and they stay, and they stay.
+
+Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay. Counting the lines in my head, but they blur, and they fade, and they fade into gray.
+
+Bottom of the room where the shadows don't move, and they stay, and they stay, and they stay.
 """
 
 # ============ AUDIO + FEATURES ============
